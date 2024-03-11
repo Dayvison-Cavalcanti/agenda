@@ -1,25 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View} from 'react-native';
 
-import { Avatar, Input,Button } from 'react-native-elements';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import {useNavigation} from '@react-navigation/native'
+import { StyleSheet, Text, View } from 'react-native';
+
+import { Avatar, Input, Button } from 'react-native-elements';
+
+import { useNavigation } from '@react-navigation/native'
 
 
 export default function Login() {
 
- const navigation = useNavigation();
+  const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
-      <StatusBar style="auto" />
+      
 
-      <Avatar
-        style={{ height: 150, width: 150, marginBottom: 50 }}
-        size='xlarge'
-        source={require('../src/user1.png' )}>
+      <View>
+        <Avatar
+          style={{width: 100, height: 100, marginBottom: 30}}
+          avatarStyle={{ width: 100, height: 100 }}
+          source={require('../src/user1.png')}>
 
-      </Avatar>
+        </Avatar>
+      </View>
 
       <View style={{ height: 250, width: '80%', marginBottom: 40 }}>
         <Input
@@ -27,12 +29,12 @@ export default function Login() {
           labelStyle={{ fontSize: 40, padding: 10, color: '#00008b' }}
           inputStyle={{ height: 50, fontSize: 28, borderColor: 'gray', borderWidth: 1 }}
         />
-    
+
         <Input
           secureTextEntry={true}
           label='Senha'
           labelStyle={{ fontSize: 40, padding: 10, color: '#00008b' }}
-          inputStyle={{height:50, fontSize: 28, borderColor: 'gray', borderWidth: 1 }}
+          inputStyle={{ height: 50, fontSize: 28, borderColor: 'gray', borderWidth: 1 }}
         />
       </View>
 
@@ -40,17 +42,18 @@ export default function Login() {
         <Button
           onPress={() => navigation.navigate('ListaContatos')}
           title="Login"
-          buttonStyle = {{height: 60, marginBottom: 20}}
-          titleStyle = {{fontSize: 40}}
+          buttonStyle={{ height: 60, marginBottom: 20 }}
+          titleStyle={{ fontSize: 40 }}
         />
         <Button
-          title="Cadastre-se"  
+          title="Cadastre-se"
           onPress={() => navigation.navigate('CadastroUsuario')}
-          buttonStyle = {{height: 60, marginBottom: 20, backgroundColor: '#CD0000'}}
-          titleStyle = {{fontSize: 40}}
+          buttonStyle={{ height: 60, marginBottom: 20, backgroundColor: '#CD0000' }}
+          titleStyle={{ fontSize: 40 }}
         />
       </View>
 
+     
     </View>
   );
 }
