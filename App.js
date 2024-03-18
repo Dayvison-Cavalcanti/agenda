@@ -3,6 +3,8 @@ import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+
+
 import Login from './screens/login';
 import ListaContatos from './screens/listaContatos';
 import EditarContatos from './screens/editarContatos';

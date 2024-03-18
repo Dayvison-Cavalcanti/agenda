@@ -7,40 +7,10 @@
       "telefone": "(81)987979852"
     },
     {
-      "id": "2",
-      "nome": "Ana",
-      "email": "ana@ifpe.edu.br",
-      "telefone": "(81)98774455"
-    },
-    {
-      "id": "3",
       "nome": "Luiz",
       "email": "luiz@ifpe.edu.br",
-      "telefone": "(81)987948879"
-    },
-    {
-      "id": "4",
-      "nome": "Neide",
-      "email": "neide@ifpe.edu.br",
-      "telefone": "(81)989742234"
-    },
-    {
-      "nome": "pedro",
-      "email": "",
-      "telefone": "81984473630",
-      "id": "5"
-    },
-    {
-      "id": "6",
-      "nome": "João",
-      "email": "paulo@ifpe.edu.br",
-      "telefone": "(81)923545489"
-    },
-    {
-      "id": "7",
-      "nome": "Rose",
-      "email": "paulo@ifpe.edu.br",
-      "telefone": "(81)923545489"
+      "telefone": "(81)988888888",
+      "id": "3"
     }
   ]
 }

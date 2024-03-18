@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { Header, Input, Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from "@react-navigation/native";
-
 import { showMessage } from "react-native-flash-message";
+
 import axios from 'axios';
 
 
@@ -33,7 +33,7 @@ export default function CadastroContato({route}) {
 
   async function inserirDados() {
 
-    axios.post('http://localhost:3000/user', {
+    axios.post('http://192.168.1.13:3000/user', {
       nome: getNome,
       email: getEmail,
       telefone: getTelefone
@@ -57,7 +57,7 @@ export default function CadastroContato({route}) {
 
   function editarDados() {
 
-    const result = axios.put('http://localhost:3000/user' + getId, {
+    const result = axios.put('http://192.168.1.13:3000/user' + getId, {
       nome: getNome,
       email: getEmail,
       telefone: getTelefone

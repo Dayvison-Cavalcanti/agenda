@@ -1,11 +1,9 @@
-
 import { StyleSheet, View,} from 'react-native';
 import { Header, Input, Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import React, { useState, useEffect } from 'react';
 import { showMessage } from "react-native-flash-message";
-
 import axios from 'axios';
 
 
@@ -22,7 +20,7 @@ export default function EditarContatos() {
 
 
   function editarDados() {
-    axios.put('http://localhost:3000/user/' + dados.id, {
+    axios.put('http://192.168.1.13:3000/user/' + dados.id, {
       nome: getNome,
       email: getEmail,
       telefone: getTelefone
@@ -36,6 +34,7 @@ export default function EditarContatos() {
           type: "success",
         });
         console.log(response);
+        navigation.navigate('ListaContatos')
       })
       .catch(function (error) {
         console.log(error);
@@ -43,7 +42,7 @@ export default function EditarContatos() {
   };
 
   function excluirDados(){
-    axios.delete('http://localhost:3000/user/'+ dados.id
+    axios.delete('http://192.168.1.13:3000/user/'+ dados.id
    )
    .then(function (response) {
        setNome('')
@@ -54,6 +53,7 @@ export default function EditarContatos() {
            type: "success",
          });
      console.log(response);
+     navigation.navigate('ListaContatos');
    })
    .catch(function (error) {
        showMessage({
